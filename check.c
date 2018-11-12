@@ -12,7 +12,7 @@ unsigned char is_valid(char *op, char *args)
 	/********************************/
 	int i = 0; 
 	int j = 0;
-	unsigned char check, mask; // xxrmirmi - xx_op1_op2 
+	unsigned char check = 0; // xxrmirmi - xx_op1_op2 
 	char* opland1[10],opland2[10] = NULL;	
 
 	if (!strcmp(op,"MOV")) // We handle only MOV commend
@@ -32,7 +32,10 @@ unsigned char is_valid(char *op, char *args)
 		j++;
 	}
  	opland2[j] = NULL;
-
+	if (check_opland(opland1) == '0')
+		return 0;
+	if (check_opland(opland2) == '0')
+		return 0;
 	check = (check_opland(opland1)<<3)+(check_opland(opland2));
 	 
 	return check;

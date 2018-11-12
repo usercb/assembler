@@ -3,3 +3,6 @@
 #include<stdlib.h>
 
 // complete this header file
+
+int is_valid(char *, char *);
+int instr_trans(char *, char *, char *);
