@@ -1,6 +1,6 @@
 #include "myas.h"
 
-int is_valid(char *op, char *args)
+unsigned char is_valid(char *op, char *args)
 {
 	//printf("if valid, return 1\n");
 	//printf("otherwise, return 0\n");
@@ -12,36 +12,47 @@ int is_valid(char *op, char *args)
 	/********************************/
 	int i = 0; 
 	int j = 0;
+	unsigned char check, mask; // xxrmirmi - xx_op1_op2 
 	char* opland1[10],opland2[10] = NULL;	
 
-	if (!strcmp(op,"MOV"))
+	if (!strcmp(op,"MOV")) // We handle only MOV commend
 		return 0;
 
+	/* parshing  */
 	while(args[i] != ','){
 		opland1[i] = args[i];
 		i++;
 	}
+	opland1[i] = NULL;
 	i++;
+
 	while(args[i] !=NULL)
 		opland2[j] = args[i];
 		i++;
 		j++;
 	}
- 
-	if (!check_opland(opland1))
-		return 0;
-	if (!check_opland(opland2))
-		return 0;
-	return 1;
+ 	opland2[j] = NULL;
+
+	check = (check_opland(opland1)<<3)+(check_opland(opland2));
+	 
+	return check;
 }
 
-int check_opland(char *opland)
+unsigned char check_opland(char *opland)
 {
-	/*if opland is validated value return 1 else return 0*/
+	/*reg is 0x3 mem is 0x2 imm is 0x1
+	  This project is toy project so we don't think complex exception */
+	int i =0; 
+
+	if (opland[0] == '$') return 0x1;
+	if (opland[0] == '0' && opland[1] == 'x') return 0x2;
+	if (opland[0] == '%') return 0x3;
 	
-	if (opland[0] != '%' || opland[0] != '&' || opland[0] !='0')
-		return 0;
-	if (opland[0] == '0' && opland[1] != 'x')
-		return 0;
-	return 1;
+	while (opland[i] != NULL) {
+		if (opland[i] == '(' && opland[i+1] == '%')
+			return 0x2; 
+		i++;
+	}
+	
+	return 0;
 }
