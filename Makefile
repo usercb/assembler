@@ -1,7 +1,7 @@
 # Write this Makefile
 
 myassm : main.o trans.o check.o
-	gcc -o myassm main.o trans.o check.o -lmyas
+	gcc -o myassm main.o trans.o check.o 
 main.o : main.c
 	gcc -O -Wall -c main.c
 

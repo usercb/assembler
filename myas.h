@@ -4,5 +4,6 @@
 
 // complete this header file
 
-int is_valid(char *, char *);
+unsigned char is_valid(char *, char *);
+unsigned char check_opland(char* );
 int instr_trans(char *, char *, char *);
