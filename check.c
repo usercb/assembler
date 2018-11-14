@@ -30,10 +30,10 @@ unsigned char is_valid(char *op, char *args){
 	op1_value = check_opland(opland1);
 	op2_value = check_opland(opland2);
 	printf("op1_value is %s, op2_value is %s\n",name[op1_value],name[op2_value]);
-	if (op1_value == '0') {
+	if (op1_value == 0) {
 		return 0;
 	}
-	if (op2_value == '0'){
+	if (op2_value == 0){
 		return 0;
 	}
 

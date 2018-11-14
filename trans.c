@@ -6,7 +6,7 @@ int instr_trans(char *op, char *args, char* mcode)
 	// check syntax 
 
 	flag = is_valid(op,args);
-	if(flag =='0'){
+	if(flag ==0){
 		printf("Error: %s %s is not valid\n", op, args);
 		return 0;
 	}
