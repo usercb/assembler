@@ -1,0 +1,47 @@
+commit 53cef7695c6e3fe42d89e716d4a08b2a34d632a4
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Wed Nov 14 11:06:49 2018 +0900
+
+    fix error '0' to 0
+
+commit 743e4dfca01377468434b7ae2b7dc0bf15f14b6a
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Tue Nov 13 20:31:23 2018 +0900
+
+    remove wrong file ~ object file, temp file..etc
+
+commit facb6b7a0916a7b078c06e6ff0d56460754f5f9c
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Tue Nov 13 20:23:05 2018 +0900
+
+    done
+
+commit 475e5502e5f5147191b1e4e070920a063adcfd14
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Mon Nov 12 22:57:47 2018 +0900
+
+    temp
+
+commit a7e51faee3eaa5f921f2eb8a5c077f2390a84bca
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Mon Nov 12 22:33:35 2018 +0900
+
+    change check.c's is_vaild() and add check_opcode
+
+commit 3cadcf928d48aa05ece36735950dbb52d9fc9f82
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Sun Nov 11 20:43:00 2018 +0900
+
+    change check.c
+
+commit 1a124773590c46da9877a98b67b95e201aad6d18
+Author: usercb2 <softcbnub@gmail.com>
+Date:   Mon Oct 29 15:53:46 2018 +0900
+
+    Make new branch and README.md
+
+commit 7265d7a3a0a1f0a35517cebcd4b95b24bbb3ba7c
+Author: Eunji Lee <alicia0729@gmail.com>
+Date:   Wed Oct 24 09:58:23 2018 +0900
+
+    first commit
